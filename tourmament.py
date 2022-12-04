@@ -1,14 +1,13 @@
-list1 = []
+
 len = int(input())
-for i in range (0,len):
-    list1.append([])
-for i in range (0,len):
-    for j in range (0,len):
-        list1[i].append(j)
-        list1[i][j]=''
-for i in range (0,len):
-    for j in range (0,len):
-        list1[i][j] = str(input())
+
+
+list1 = [[] for _ in range(len)]
+
+for i in range(len):
+    a = input()
+    list1[i] = a
+
 for i in range (0,len):
     for j in range (0,len):
         if i==j:
