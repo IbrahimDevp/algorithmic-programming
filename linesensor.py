@@ -1,10 +1,8 @@
 H,W = map(int,input().split())
 
-list1 = [[] for _ in range(W)]
+list1 = [list(map(str,list(input()))) for _ in range(H)]
 
-for i in range(H):
-    s = str(input())
-    list1[i] = s
+
 
 ans = ''
 for i in range(W):
