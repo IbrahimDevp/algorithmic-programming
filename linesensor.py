@@ -2,14 +2,8 @@ H,W = map(int,input().split())
 
 list1 = [list(input()) for _ in range(H)]
 
+list1 = list(zip(*list1))
 
-
-ans = ''
 for i in range(W):
-    count = 0
-    for j in range(H):
-        if list1[j][i] == '#':
-            count +=1
-    ans += str(count) + ' '
-print(ans)
+    print(list1[i].count('#'), end = ' ')
 
