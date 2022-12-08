@@ -1,6 +1,6 @@
 H,W = map(int,input().split())
 
-list1 = [list(map(str,list(input()))) for _ in range(H)]
+list1 = [list(input()) for _ in range(H)]
 
 
 
