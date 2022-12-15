@@ -6,5 +6,5 @@ for _ in range(Q):
     s.append(val1)
     t.append(val2)
 
-print(L)
-print(s,t)
+for i in range(Q):
+    print(L[s[i]-1][t[i]-1])
