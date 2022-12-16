@@ -31,39 +31,3 @@ for i in range(Z):
 admitted.sort()
 for i in admitted:
     print (i)
-# tA = A.copy()
-# tB = B.copy()
-# for i in range(Z):
-#     max = 0
-#     loc = 0
-#     for j in range (N):
-#         if max < tA[j]+tB[j]:
-#             max = tA[j]+tB[j]
-#             loc = j+1
-#     tA[loc-1],tB[loc-1] = -1,-1
-#     admitted.append(loc)
-# tA = A.copy()
-# tB = B.copy()
-# for i in range(X):
-#     max = 0
-#     loc = 0
-#     for j in range (1,len(tA)+1):
-#         if max < tA[j-1]:
-#             max = tA[j-1]
-#             loc = j
-#     tA[loc-1] = -1
-#     admitted.append(loc)
-# tA = A.copy()
-# tB = B.copy()
-# for i in range(Y):
-#     max = 0
-#     loc = 0
-#     for j in range (1,len(tB)+1):
-#         if max <= tB[j-1]:
-#             max = tB[j-1]
-#             loc = j
-#     tB[loc-1] = -1
-#     admitted.append(loc)
-# admitted.sort()
-# for i in admitted:
-#     print(i)
