@@ -1,8 +1,2 @@
-s = str(input())
-T = 'oxx'
-for i in range(pow(10,5)):
-    T += 'oxx'
-if s not in T:
-    print('No')
-else:
-    print('Yes')
+S = input()
+print('Yes' if S in 'oxx'*100 else 'No')
