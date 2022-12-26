@@ -16,5 +16,5 @@ for i in range (N):
             if A[i]+A[j]+A[k] <= W and i!=j and i!=k and j!=k:
                 if A[i]+A[j]+A[k] not in cnt:
                     cnt.append(A[i]+A[j]+A[k])
-
+ 
 print(len(cnt))
