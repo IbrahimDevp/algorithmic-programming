@@ -1,7 +1,7 @@
 A,B,C,D = map(int,input().split())
 red = 0
 operation = 0
-if B > C * D:
+if B >= C * D:
     print(-1)
     exit()
 else:
