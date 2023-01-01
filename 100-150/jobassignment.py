@@ -7,25 +7,42 @@ for _ in range(N):
     A.append(a)
     B.append(b)
     total.append(a+b)
-ind = total.index(min(total))
-val = min(total)
-ans = val
-minn1 = 10000000
-minn2 = 10000000
-for i in range (N):
-    if i != ind and B[i] < minn1:
-        minn1 = B[i]
-if minn1 < ans:
-    ans = minn1
-for i in range (N):
-    if i != ind and A[i] < minn2:
-        minn2 = A[i]
-if minn2 < ans:
-    ans = minn2
+shortest = min(total)
+ind = total.index(shortest)
+shA=A[ind]
+shB=B[ind]
+A.pop(ind)
+B.pop(ind)
+minn = min(A)
+minn2 = min(B)
+if shA < shB:
+    if minn2 <= shortest:
+        print(minn2)
+        exit()
+    else:
+        print(shortest)
+        exit()
+elif shA > shB:
+    if minn <= shortest:
+        print(minn)
+        exit()
+    else:
+        print(shortest)
+        exit()
+else:
+    if minn <= shortest:
+        if minn2 <= minn:
+            print(minn2)
+            exit()
+        else:
+            print(minn)
+            exit()
+    if minn2 <= shortest:
+        if minn <= minn2:
+            print(minn)
+            exit()
+        else:
+            print(minn2)
+            exit()
+print(shortest)
 
-print(ans)
-
-
-
-
-    
