@@ -1,9 +1,9 @@
 import math
-X = float(input())
+X = int(input())
 ans = 100
-years = 0
-while(math.floor(ans) != X):
-    per = ans * 0.01
-    ans += per
-    years +=1
+years = 0 
+while ans < X:
+    ans += ans//100
+    years+=1
+    print(ans)
 print(years)
