@@ -1,12 +1,20 @@
-import math
-N = int(input())
-arr = list(map(int,input().split()))
-p = 1
-num = pow(2,63)-1
-for i in arr:
-    p*= i
+n = int(input())
+lst = list(map(int, input().split()))
 
-if p<=num:
-    print(p)
+product = 1
+
+if len(lst) < 99900:
+    for num in lst:
+        product *= num
+    if product <= (2 ** 63 - 1):
+        print(product)
+    else:
+        print(-1)
+    exit()
 else:
-    print(-1)
+    for i in range(n):
+        product *= lst[i]
+        if product > (2**63 - 1):
+            print(-1)
+            exit()
+print(product)
