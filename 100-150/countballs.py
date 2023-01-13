@@ -1,6 +1,6 @@
 N,A,B=map(int,input().split())
 
-count = A//(A+B)
+count = N//(A+B)
 A_count = count * A
 rem = N%(A+B)
 
