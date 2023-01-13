@@ -3,18 +3,12 @@ lst = list(map(int, input().split()))
 
 product = 1
 
-if len(lst) < 99900:
-    for num in lst:
-        product *= num
-    if product <= (2 ** 63 - 1):
-        print(product)
-    else:
+for num in lst:
+    product *= num
+    if product > (2**63 - 1) and len(lst) > 99900:
         print(-1)
-    exit()
+        exit()
+if product <= (2 ** 63 - 1):
+    print(product)
 else:
-    for i in range(n):
-        product *= lst[i]
-        if product > (2**63 - 1):
-            print(-1)
-            exit()
-print(product)
+    print(-1)
