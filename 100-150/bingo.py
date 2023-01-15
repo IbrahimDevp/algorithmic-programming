@@ -1,35 +1,20 @@
-
 A = list(list(map(int,input().split())) for _ in range(3))
 N = int(input())
 b = list(int(input()) for _ in range(N))
-
+f,s=0,0
 for i in range(3):
     for j in range(3):
         if A[i][j] in b:
             A[i][j]=-1
-for i in range(3):
-    cnt = 0
-    for j in range(3):
-        if A[i][j] == -1:
-            cnt+=1
-    if cnt == 3:
-        print('Yes')
-        exit()
-for i in range(3):
-    cnt = 0
-    for j in range(3):
-        if A[j][i] == -1:
-            cnt+=1
-    if cnt == 3:
-        print('Yes')
-        exit()
-if A[0][0]+A[1][1]+A[2][2] == -3:
-    print('Yes')
-    exit()
-if A[2][0]+A[1][1]+A[0][2] == -3:
-    print('Yes')
-    exit()
-print('No')
+            if i-j==0:
+                f-=1
+            if i+j==len(A)-1:
+                s-=1
 
-        
+for i in range(3):
+    column = [row[i] for row in A]
+    if sum(A[i])==-3 or sum(column)==-3 or f == -3 or s == -3:
+        print('Yes')
+        exit()
+print('No')
     
