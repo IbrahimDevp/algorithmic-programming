@@ -1,8 +1,7 @@
 N,K = map(int, input().split())
-freq = list(0 for _ in range(N))
+freq = set()
 for _ in range(K):
     input()
-    A = list(map(int,input().split()))
-    for i in range(len(A)):
-        freq[A[i]-1]+=1
-print(freq.count(0))
+    for i in list(map(int,input().split())):
+        freq.add(i)
+print(N-len(freq))
