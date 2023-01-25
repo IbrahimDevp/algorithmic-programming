@@ -1,17 +1,8 @@
 A,B,C,K = map(int, input().split())
-sum = 0
-tempK = K
-tempK-=A
-if tempK <=0:
+if K <= A:
     print(K)
-    exit()
-tempK-=B
-if tempK<=0:
+elif K <= A+B:
     print(A)
-    exit()
-tempK-=C
-if tempK>=0:
-    print(A-C)
-    exit()
-C+=tempK
-print(A-C)
+else:
+    S = K - (A+B)
+    print(A-S)
