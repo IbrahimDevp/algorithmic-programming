@@ -1,0 +1,5 @@
+s = input()
+s = s.replace("6","X")
+s = s.replace("9","6")
+s = s.replace("X","9")
+print(s[::-1])
