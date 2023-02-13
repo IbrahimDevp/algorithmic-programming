@@ -8,11 +8,10 @@ for i in range(N):
      ans.append(sum(flvs) - flvs[i])
 for i in range(N):
      ans2.append(abs(sum(flvs) - flvs[i]))
-
-if sum(flvs)<= 0:
+if sum(flvs) in ans or sum(flvs) in ans2:
+     print(sum(flvs))
+elif sum(flvs)< 0:
      print(min(ans))
-elif sum(flvs) == 0:
-     print(min(ans2))
 else:
      print(max(ans))
     
