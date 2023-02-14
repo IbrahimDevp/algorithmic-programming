@@ -1,9 +1,9 @@
 S,T = map(int,input().split())
 count=0
-for i in range(1000):
-    for j in range(1000):
-        for k in range(1000):
-            if i+j+k <= S and i*j*k <=T:
+for i in range(S+1):
+    for j in range(S+1-i):
+        for k in range(S+1-i-j):
+            if i*j*k <=T:
                 count+=1
             else:
                 break
