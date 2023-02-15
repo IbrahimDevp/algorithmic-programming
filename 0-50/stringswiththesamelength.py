@@ -1,7 +1,3 @@
-N = int(input())
-S = list(input())
-NS = list()
-for i in range(N):
-    NS.append(S[i])
-    NS.append(S[N+i+1])
-print("".join(NS))
+input();s,t=input().split();a=""
+for i,j in zip(s,t): a+=i+j
+print(a)
