@@ -1,10 +1,8 @@
 N = int(input())
-map = {}
-num = list()
+map = []
 for i in range(N):
     a,b = input().split()
-    num.append(int(b))
-    map[int(b)] = a
-num.sort(reverse=True)
-print(map[num[1]])
+    map.append([int(b),a])
+map.sort(reverse=True)
+print(map[1][1])
 
