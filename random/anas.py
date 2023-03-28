@@ -7,4 +7,4 @@ for i in range(m):
             word2[j] = 'G'
             word2[j+1] = 'B'
     word = word2.copy()
-print(*word2, sep='')  
+print(*word2, sep='') 
