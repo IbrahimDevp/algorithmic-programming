@@ -1,24 +1,25 @@
 word = input()
 word2 = []
 box = []
-count = 0
+flag = True
 for i in range(len(word)):
     if word[i] == '(':
         word2.append(word[i])
-        count=0
-    elif word[i] in box:
-        print('No')
-        exit()
-    elif word[i] == ')' and word[i-1] =='(':
-        word2.pop()
     elif word[i]==')':
-        word2.pop()
-        if count!=0:
-            del box[count*-1:]
-            count=0
-        else:
-            box.clear()
+        while(True):
+            tmp = word2.pop()
+            if tmp =='(':
+                break
+            else:
+                box.remove(tmp)
     else:
-        box.append(word[i])
-        count+=1
-print('Yes')
+        if word[i] in box:
+            flag = False
+            break
+        else:
+            word2.append(word[i])
+            box.append(word[i])
+if flag == False:
+    print('No')
+else:
+    print('Yes')
